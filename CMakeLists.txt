@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.0)
+project(wearlibary)
+
+set(MATRIX wearmatrix.hpp)	
+set(MATH wearmath.hpp)
+set(FILE wearfile.hpp)
+set(SPLIT wearsplit.hpp)
+set(STRENUM wearstringenum.hpp)
+set(BINARY wearbinary.hpp)
+
+add_library(wearmatrix INTERFACE ${MATRIX})
+add_library(wearmath   INTERFACE ${MATH})
+add_library(wearfile   INTERFACE ${FILE})
+add_library(wearsplit  INTERFACE ${SPLIT})
+add_library(wearstringenum INTERFACE ${STRENUM})
+add_library(wearbinary INTERFACE ${BINARY})
+
+add_subdirectory(wearmatrix)
+add_subdirectory(wearmath)
+add_subdirectory(wearfile)
+add_subdirectory(wearsplit)
+add_subdirectory(wearstringenum)
+add_subdirectory(wearbinary)
+
+target_link_libraries(wearmatrix wearmath wearfile wearsplit wearstringenum wearbinary )
