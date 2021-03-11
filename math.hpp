@@ -77,7 +77,6 @@ namespace wear {
         void operator+=(Vector3 vec3) { x += vec3.x; y += vec3.y; z += vec3.z; }
         void operator-=(Vector3 vec3) { x -= vec3.x; y -= vec3.y; z -= vec3.z; }
         void operator/=(Vector3 vec3) { x /= vec3.x; y /= vec3.y; z /= vec3.z; }
-        void operator*=(Vector3 vec3) { x *= vec3.x; y *= vec3.y; z *= vec3.z; }
     };
 
     struct Vector2 {
@@ -88,7 +87,6 @@ namespace wear {
         void operator+=(Vector2 vec3) { x += vec3.x; y += vec3.y; }
         void operator-=(Vector2 vec3) { x -= vec3.x; y -= vec3.y; }
         void operator/=(Vector2 vec3) { x /= vec3.x; y /= vec3.y; }
-        void operator*=(Vector2 vec3) { x *= vec3.x; y *= vec3.y; }
     };
 
 } // namespace wear
